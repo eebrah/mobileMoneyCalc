@@ -2,6 +2,13 @@
 
 if( substr_count( $_SERVER[ 'HTTP_ACCEPT_ENCODING' ], 'gzip' ) ) { ob_start( "ob_gzhandler" ); } else { ob_start(); }
 
+$filename = "index.xhtml";
+
+$doc = new DOMDocument();
+
+$doc -> validateOnParse = true;
+$doc -> loadHTML( file_get_contents( $filename ) );
+
 $errors = Array(
 	  "success!"
 	, "the amount was smaller than the minimum allowed"

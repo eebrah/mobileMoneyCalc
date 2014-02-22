@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html manifest="cache.manifest"
+      xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>mobile money tarrif calculator</title>
 		<meta name="viewport" content="width=device-width" />
 		<link type="text/css"
 		      rel="stylesheet"
-		      href="main.css.php">
+		      href="main.css" />
 	</head>
 	<body onload="init();">
 		<div class="wrapper">
@@ -28,7 +29,7 @@
 				</div>
 				<div class="sideColumn">
 					<div class="dialog">
-						<form action="?"
+						<form action="http://www.ibrahimngeno.me.ke/mm/index.php"
 						      id="calculator">
 							<fieldset class="info">
 								<legend>transaction details</legend>
@@ -54,6 +55,33 @@
 								<button type="submit">submit</button>
 							</fieldset>
 						</form>
+					</div>
+					<div>
+						<table id="results"
+						       style="display: none;">
+							<tbody>
+								<tr>
+									<th>send to registered user</th>
+									<td></td>
+								</tr>
+								<tr>
+									<th>send to unregistered user</th>
+									<td></td>
+								</tr>
+								<tr>
+									<th>agent withdrawal( registered )</th>
+									<td></td>
+								</tr>
+								<tr>
+									<th>agent withdrawal( unregistered )</th>
+									<td></td>
+								</tr>
+								<tr>
+									<th>ATM withdrawal</th>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 				<div class="mainColumn">
@@ -504,7 +532,7 @@
 			</div>
 		</div>
 		<script type="text/javascript"
-		        src="main.js.php">
+		        src="main.js">
 		</script>
 	</body>
 </html>
